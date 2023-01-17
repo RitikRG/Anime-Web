@@ -21,6 +21,8 @@
     margin-top: 20px;
     margin-left: 20px;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
 }
 .closedMenu{
     transform: translateX(-100%);
@@ -43,6 +45,7 @@
 }
 
 #redBg{
+    z-index: 1;
     position: absolute;
     clip-path: polygon(0% 0%, 75% 0%, 100% 0, 71% 100%, 0% 100%);
     width: 98vw;
@@ -51,6 +54,7 @@
 }
 
 #whiteBg{
+    z-index: 1;
     position: absolute;
     clip-path: polygon(0% 0%, 75% 0%, 100% 0, 71% 100%, 0% 100%);
     width: 95vw;
@@ -60,12 +64,14 @@
 
 #closeIc{
     background: url(/Assets/closeIc.png);
+    background-color: var(--nRed);
+    border-radius: 30px;
     width: 30px;
     height: 30px;
     background-size: contain;
     position: fixed;
     left: 85%;
-    top: 2%;
+    top: 5%;
     cursor: pointer;
 }
 
@@ -117,4 +123,23 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--nRed);
+}
+
+#mobiLogo{
+    position: absolute;
+    background: url(/Assets/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    right: 10px;
+    top: 5px;
+}
+
+
+@media screen and (min-width:768px){
+    #mobiLogo{
+        display: none;
+    }
 }
