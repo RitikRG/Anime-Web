@@ -1,0 +1,57 @@
+:root{
+    --tBg:rgba(23, 23, 23, 0.6);
+
+}
+
+
+#heroSection{
+    z-index: -1;
+    width: 100vw;
+    height: 60vh;
+    background: url(/Assets/mainBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#heroDesc{
+    padding-top: 20%;
+    padding-left: 15%;
+    padding-right: 5%;
+    margin-left: 40vw;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: var(--tBg);
+    width: 60%;
+    height: 100%;
+}
+#descHead{
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+#desc{
+    text-align: justify;
+}
+
+
+
+
+@media screen and (min-width:768px){
+    #heroDesc{
+        width: 40%;
+        margin-left: 60vw;
+        padding-top: 8%;
+        padding-left: 10%;
+    }
+    #heroSection{
+        height: 70vh;
+    }
+    #descHead{
+        font-size: 1.45rem;
+        font-weight: 600;
+    }
+    #desc{
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+    
+}

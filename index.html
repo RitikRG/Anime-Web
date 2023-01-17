@@ -7,9 +7,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/dist/output.css" rel="stylesheet">
+        <link href="/src/index.css" rel="stylesheet">
         <link href="/src/commonFiles/navbar.css" rel="stylesheet">
     </head>
-    <body >
+    <body class="bg-neutral-900" >
+        <!-- mobilogo -->
+        <div id="mobiLogo" ></div>
         <!-- Navbar -->
         <!-- pc navbar -->
         <div class="w-full h-[75px] bg-neutral-900 sticky top-0 text-white flex justify-between px-4 pt-6 md:text-xl -translate-x-[200%] md:translate-x-[0%]" >
@@ -24,16 +27,15 @@
         <!-- mobi Nav -->
         <div class="md:hidden text-white">
             <div class="container absolute top-0">
-                <div id="mainLogo" class="mainLogoInit"></div>
-                <div id="hamMenu"><svg  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.879 103.609"  ><g><path d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"/></g></svg></div>
+                <div id="hamMenu" class="bg-primaryColor"><svg  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.879 103.609"  ><g><path d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"/></g></svg></div>
                 <div id="redBg" class="closedMenu"></div>
                 <div id="whiteBg" class="closedMenu">
-                    <div id="closeIc"></div>
+                    <div id="closeIc" class="bg-primaryColor"></div>
                     <div id="menuHeader"></div>
                     <div id="menuContent" class="text-center -translate-x-[10%]">
                         <ul class="linksList">
                             <li>
-                                <a href="#">Home</a>
+                                <a href="#" class="text-primaryColor">Home</a>
                             </li>
                             <li>
                                 <a href="#">Anime</a>
@@ -53,7 +55,14 @@
                 </div>
             </div>
         </div>
-
+        <!-- navbar close -->
+        <!-- Hero section -->
+        <div id="heroSection">
+            <div class=" text-white" id="heroDesc">
+                <p class="w-full text-center" id="descHead">Naruto</p>
+                <p class="w-full text-justify" id="desc">Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and ...</p>
+            </div>
+        </div>
 
         <script src="/src/navbar.js" async defer></script>
     </body>
