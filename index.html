@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/dist/output.css" rel="stylesheet">
         <link href="/src/index.css" rel="stylesheet">
-        <link href="/src/commonFiles/navbar.css" rel="stylesheet">
+        <link href="/src/commonCss/navbar.css" rel="stylesheet">
+        <link href="/src/animeListCss.css" rel="stylesheet">
     </head>
     <body class="bg-neutral-900" >
         <!-- mobilogo -->
@@ -69,7 +70,42 @@
             <div class="w-[30%] text-center"><p class="text-2xl font-bold" ><span id="episodes"></span>+</p><p class="font-semibold">Episodes</p></div>
             <div class="w-[30%] text-center"><p class="text-2xl font-bold" ><span id="anime"></span>+</p><p class="font-semibold">Anime</p></div>
         </div>
-        <script src="/src/navbar.js" async defer></script>
+
+        <!-- Anime listing section -->
+        <div id="animeDubContainer" class=" relative w-[95%] mb-4 mx-auto px-4 text-white rounded-xl shadow-lg shadow-neutral-800/50 bg-neutral-800 md:w-[80vw]">
+            <div id="animeDubContainerHeading">
+                <p class="text-2xl my-1">Anime <span class="text-primaryColor">Dub</span></p>
+                <hr class="h-[10px]">
+            </div>
+            <div id="animeDubListContainer" class="flex gap-x-4 py-4">
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoSeriesLogo"><div id="listHeadNaruto" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">Naruto</div></div>
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoShippudenLogo"><div id="listHeadNarutoShippuden" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">: Shippuden</div></div>
+            </div>
+        </div>
+        <!-- anime pop up -->
+        <div id="narutoPopUp" class="border-4 border-primaryColor popUpInit top-[40%] left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-hidden">
+            <div id="narutoPopUpCloseIc" class="bg-primaryColor"></div>
+            <div class="w-[40%] h-[100%]" id="narutoPopUpImage"></div>
+            <div class="w-[60%] h-[100%] md:px-14 flex flex-col p-4">
+                <p class="text-3xl text-bold text-primaryColor mb-5 md:text-4xl">Naruto</p>
+                <p class="text-white text-md text-justify md:text-lg md:mb-14">Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village's leader and strongest ninja.</p>
+                <p class="text-center mt-4 md:text-2xl"><a href=""><button class="text-neutral-900 bg-primaryColor rounded-lg px-4 py-1 font-bold hover:scale-105 duration-200">Download</button></a></p>
+            </div>
+        </div>
+        <div id="narutoShippudenPopUp" class="border-4 border-primaryColor popUpInit top-[40%] left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-hidden">
+            <div id="narutoShippudenPopUpCloseIc" class="bg-primaryColor"></div>
+            <div class="w-[40%] h-[100%]" id="narutoShippudenPopUpImage"></div>
+            <div class="w-[60%] h-[100%] md:px-10 flex flex-col p-4">
+                <p class="text-3xl text-bold text-primaryColor mb-4 md:text-4xl md:mb-8">Naruto: Shippuden</p>
+                <p class="text-white text-md md:text-xl text-justify md:mb-10">Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village's leader and strongest ninja.</p>
+                <p class="text-center mt-4 md:text-2xl"><a href=""><button class="text-neutral-900 bg-primaryColor rounded-lg px-4 py-1 font-bold hover:scale-105 duration-200">Download</button></a></p>
+            </div>
+        </div>
+        
+        
+        
+        <script src="/src/js/navbar.js" async defer></script>
         <script src="/src/js/stats.js" ></script>
+        <script src="/src/js/popUp.js" ></script>
     </body>
 </html>
