@@ -4,6 +4,12 @@
 #narutoShippudenLogo{
     background:url(/Assets/narutoShippudenLogo.jpg) no-repeat center/cover;
 }
+#narutoSubSeriesLogo{
+    background:url(/Assets/narutoSeriesLogo.jpg) no-repeat center/cover;
+}
+#narutoSubShippudenLogo{
+    background:url(/Assets/narutoShippudenLogo.jpg) no-repeat center/cover;
+}
 #narutoPopUpImage{
     background:url(/Assets/narutoSeriesLogo.jpg) no-repeat center/cover;
 }

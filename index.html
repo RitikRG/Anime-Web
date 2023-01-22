@@ -9,7 +9,10 @@
         <link href="/dist/output.css" rel="stylesheet">
         <link href="/src/index.css" rel="stylesheet">
         <link href="/src/commonCss/navbar.css" rel="stylesheet">
+        <link href="/src/commonCss/footer.css" rel="stylesheet">
         <link href="/src/animeListCss.css" rel="stylesheet">
+        <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     </head>
     <body class="bg-neutral-900" >
         <!-- mobilogo -->
@@ -19,7 +22,7 @@
         <div class="w-full h-[75px] bg-neutral-900 sticky top-0 text-white flex justify-between px-4 pt-6 md:text-xl -translate-x-[200%] md:translate-x-[0%] z-10" >
             <a href=""><div id="logo"></div></a>
             <ul class="md:w-[50%] lg:w-[35%] flex justify-around h-fit">
-                <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 hover:text-primaryColor hover:border-primaryColor/50"><a href="">Home</a></li>
+                <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 text-primaryColor hover:border-primaryColor/50"><a href="">Home</a></li>
                 <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 hover:text-primaryColor hover:border-primaryColor/50"><a href="">Anime</a></li>
                 <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 hover:text-primaryColor hover:border-primaryColor/50"><a href="">Socials</a></li>
                 <li class=" rounded-xl hover:border-b-4  hover:border-primaryColor/50 button"><a href=""><button class="rounded-full px-2 bg-primaryColor hover:scale-110 duration-200 text-neutral-900 font-semibold py-1 -translate-y-1">Contact Us</button></a></li>
@@ -34,17 +37,17 @@
                     <div id="closeIc" class="bg-primaryColor"></div>
                     <div id="menuHeader"></div>
                     <div id="menuContent" class="text-center -translate-x-[10%]">
-                        <ul class="linksList">
-                            <li>
+                        <ul class="">
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor">
                                 <a href="#" class="text-primaryColor">Home</a>
                             </li>
-                            <li>
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor mt-4">
                                 <a href="#">Anime</a>
                             </li>
-                            <li>
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor mt-4">
                                 <a href="#">Socials</a>
                             </li>
-                            <li>
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor mt-4">
                                 <a href="#"><button class="rounded-full px-2 py-1 bg-primaryColor text-neutral-900">Contact Us</button></a>
                             </li>
                             
@@ -82,8 +85,18 @@
                 <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoShippudenLogo"><div id="listHeadNarutoShippuden" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">: Shippuden</div></div>
             </div>
         </div>
+        <div id="animeSubContainer" class=" relative w-[95%] mb-4 mx-auto px-4 text-white rounded-xl shadow-lg shadow-neutral-800/50 bg-neutral-800 md:w-[80vw]">
+            <div id="animeSubContainerHeading">
+                <p class="text-2xl my-1">Anime <span class="text-primaryColor">Sub</span></p>
+                <hr class="h-[10px]">
+            </div>
+            <div id="animeSubListContainer" class="flex gap-x-4 py-4">
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoSubSeriesLogo"><div id="listHeadNaruto" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">Naruto</div></div>
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoSubShippudenLogo"><div id="listHeadNarutoShippuden" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">: Shippuden</div></div>
+            </div>
+        </div>
         <!-- anime pop up -->
-        <div id="narutoPopUp" class="border-4 border-primaryColor popUpInit top-[40%] left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-hidden">
+        <div id="narutoPopUp" class="border-4 border-primaryColor popUpInit  left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-x-hidden overflow-y-scroll top-[80vh]">
             <div id="narutoPopUpCloseIc" class="bg-primaryColor"></div>
             <div class="w-[40%] h-[100%]" id="narutoPopUpImage"></div>
             <div class="w-[60%] h-[100%] md:px-14 flex flex-col p-4">
@@ -92,7 +105,7 @@
                 <p class="text-center mt-4 md:text-2xl"><a href=""><button class="text-neutral-900 bg-primaryColor rounded-lg px-4 py-1 font-bold hover:scale-105 duration-200">Download</button></a></p>
             </div>
         </div>
-        <div id="narutoShippudenPopUp" class="border-4 border-primaryColor popUpInit top-[40%] left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-hidden">
+        <div id="narutoShippudenPopUp" class="border-4 border-primaryColor popUpInit top-[80vh] left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-x-hidden overflow-y-scroll">
             <div id="narutoShippudenPopUpCloseIc" class="bg-primaryColor"></div>
             <div class="w-[40%] h-[100%]" id="narutoShippudenPopUpImage"></div>
             <div class="w-[60%] h-[100%] md:px-10 flex flex-col p-4">
@@ -101,11 +114,46 @@
                 <p class="text-center mt-4 md:text-2xl"><a href=""><button class="text-neutral-900 bg-primaryColor rounded-lg px-4 py-1 font-bold hover:scale-105 duration-200">Download</button></a></p>
             </div>
         </div>
-        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet impedit in laudantium possimus ea ab esse voluptatem, consectetur ratione ipsam cupiditate. Sit vitae error accusantium quis aspernatur consectetur quidem laudantium sint, reiciendis voluptatibus veritatis animi doloremque ea laborum molestiae veniam optio illum ad corporis debitis adipisci ex. Ipsam nobis asperiores pariatur, explicabo veritatis, obcaecati fugiat debitis sapiente ullam totam aliquam adipisci. Veritatis, iure nulla illum officiis perferendis odit minima neque consectetur assumenda debitis dolores natus id aut ut adipisci officia, ipsa deserunt! Aliquid pariatur quis maxime illum molestiae eaque harum, odit sint! Recusandae eaque vitae accusamus quidem pariatur et provident incidunt laborum. Voluptatibus voluptas inventore molestiae repellendus commodi dolorem iusto consectetur harum possimus officia consequuntur obcaecati, eius nisi beatae reprehenderit quo accusantium eos fugit error ratione. Eum commodi aliquam mollitia error voluptas quisquam eligendi quas vel, libero voluptatibus. Repellendus aspernatur numquam ex excepturi libero eum quas? Assumenda, dolore deserunt! Suscipit molestiae, sapiente, cupiditate inventore laborum reprehenderit veniam quam iure dolorum rem alias autem molestias eveniet totam. Beatae explicabo iusto quasi distinctio blanditiis fuga dolorum perspiciatis. Voluptas modi tempore tempora corrupti odio labore debitis quod, nisi minima explicabo optio architecto omnis nulla officiis expedita iste ipsam aliquam veniam! Consequuntur dignissimos at cum impedit natus ad error vero beatae adipisci, fugit, commodi reiciendis praesentium sit eum voluptatibus quisquam minus quibusdam temporibus optio. Perferendis nulla maiores modi veniam, voluptatibus officia aperiam commodi accusamus corrupti maxime hic repellendus eius vitae, esse provident quis! Aspernatur nihil quam quasi sint natus ipsam repellendus magnam vel commodi, odit harum distinctio est in? Distinctio quidem culpa voluptate esse eaque excepturi magni earum accusamus eligendi dicta molestias id veniam itaque ex totam fuga omnis iusto, soluta sed fugit exercitationem modi nostrum magnam quisquam. Earum quaerat quam esse sequi velit perspiciatis doloribus, laborum cupiditate blanditiis, similique aut accusantium deleniti voluptatum enim laudantium atque, nobis possimus debitis ipsa minima illo dolores quisquam neque error? Doloribus ullam vero ducimus numquam amet doloremque consequatur eius repudiandae quibusdam assumenda veniam, reprehenderit nisi labore eum rerum natus, culpa eligendi laudantium dolor. Doloribus explicabo maxime quas rem dolorem quia magnam enim laudantium, laboriosam eos soluta corporis impedit ducimus voluptates perspiciatis. Saepe eum, recusandae sit aut, aperiam laboriosam fugiat nesciunt non modi distinctio repellat nihil cupiditate blanditiis? Minima eaque hic impedit omnis, alias magni eum in id eligendi, provident consequuntur neque! Mollitia eum sint minima quibusdam porro nam labore cum aspernatur qui sapiente veniam culpa, libero modi rerum harum totam eligendi inventore facilis voluptate dolor? Aperiam, odio? Ipsum officiis quam dolore quidem modi repellat dolorem similique ad iste at velit nesciunt quod fugit a praesentium est accusantium, eligendi sed suscipit veritatis cum quae! Minima esse ad ullam cupiditate odit dolorem est. Numquam animi porro fuga adipisci illo, quas, consequatur dolores tempore voluptate id, totam recusandae? Cupiditate fugit voluptatibus id voluptatem quas molestiae repudiandae, facere voluptate commodi assumenda cum deserunt rem nisi dolore nihil incidunt placeat temporibus deleniti nesciunt et ipsa! Enim nihil, distinctio error rem voluptatem et molestias odio deleniti, accusantium officiis provident praesentium tempore velit mollitia! -->
-        
+        <!-- Trending Section -->
+        <div id="trendingSection" class="w-[95%] md:w-[80vw] rounded-xl bg-neutral-800 h-[300px] mx-auto shadow-xl mb-4">
+            <div id="trendingSectionHeading" class="w-full bg-primaryColor rounded-t-xl"><p class="text-neutral-900 text-xl px-4 py-2 font-bold">Trending Anime</p></div>
+            <div id="trendingSectionContainer" class="grid grid-cols-1 p-2 overflow-y-scroll gap-y-2">
+                <div class="w-full grid grid-cols-6 bg-neutral-700 rounded-xl align-baseline text-primaryColor shadow-md shadow-primaryColor/20">
+                    <div class="col-span-1 border-2 border-neutral-900  rounded-l-xl  px-1 py-2"><p class="text-center">1.</p></div>
+                    <div class="col-span-3 border-2 border-neutral-900  px-1 py-2  font-bold"><p class="text-primaryColor px-3 text-xl">Naruto</p></div>
+                    <div class="col-span-2 border-2 border-neutral-900 rounded-r-xl  px-1 py-2 text-center"><a href=""><button class="bg-primaryColor px-2 rounded-xl font-semibold hover:scale-105 duration-200 text-neutral-900">Watch now</button></a></div>
+                </div>
+                <div class="w-full grid grid-cols-6 bg-neutral-700 rounded-xl align-baseline text-primaryColor shadow-md shadow-primaryColor/20">
+                    <div class="col-span-1 border-2 border-neutral-900  rounded-l-xl  px-1 py-2"><p class="text-center">2.</p></div>
+                    <div class="col-span-3 border-2 border-neutral-900  px-1 py-2  font-bold"><p class="text-primaryColor px-3 text-xl">Naruto: Shippuden</p></div>
+                    <div class="col-span-2 border-2 border-neutral-900 rounded-r-xl  px-1 py-2 text-center"><a href=""><button class="bg-primaryColor px-2 rounded-xl font-semibold hover:scale-105 duration-200 text-neutral-900">Watch now</button></a></div>
+                </div>
+                <div class="w-full grid grid-cols-6 bg-neutral-700 rounded-xl align-baseline text-primaryColor shadow-md shadow-primaryColor/20">
+                    <div class="col-span-1 border-2 border-neutral-900  rounded-l-xl  px-1 py-2"><p class="text-center">3.</p></div>
+                    <div class="col-span-3 border-2 border-neutral-900  px-1 py-2  font-bold"><p class="text-primaryColor px-3 text-xl">Coming soon</p></div>
+                    <div class="col-span-2 border-2 border-neutral-900 rounded-r-xl  px-1 py-2 text-center"><a href=""><button class="bg-primaryColor px-2 rounded-xl font-semibold hover:scale-105 duration-200 text-neutral-900">Coming soon</button></a></div>
+                </div>
+        </div>
+        <!-- footer section -->
+        <div id="footerSection" class="w-full mt-8 flex relative bg-neutral-900 py-10">
+            <div class="w-[20vw] grid grid-cols-1">
+                <div><a href=""><div id="footerLogo" class="h-[100px] w-full"></div></a></div>
+            </div>
+            <div id="footerLinks" class="w-[40vw] grid grid-cols-1  px-20 text-xl text-white ">
+                <a href="" class="bg-primaryColor overflow-visible w-[0px] h-[4px] hover:text-primaryColor duration-200 rounded-full mt-6"><p class="-translate-y-8 ">Home</p></a>
+                <a href="" class="bg-primaryColor overflow-visible w-[0px] h-[4px] hover:text-primaryColor duration-200 rounded-full mt-10"><p class="-translate-y-8">Anime</p></a>
+                <a href="" class="bg-primaryColor overflow-visible w-[0px] h-[4px] hover:text-primaryColor duration-200 rounded-full mt-10"><p class="-translate-y-8">Socials</p></a>
+            </div>
+            <div id="footerSocials" class="grid grid-cols-1 md:grid-cols-3 md:text-2xl w-[40vw] text-center text-white gap-y-4 ">
+                <a href=""><div><i class="fab fa-2x fa-linkedin-in hover:scale-110 duration-200 hover:text-[#0A66C2]"></i></div></a>
+                <a href=""><div><i class="fab fa-2x fa-github hover:scale-110 duration-200 hover:text-black hover:bg-white rounded-full"></i></div></a>
+                <a href=""><div><i class="fab fa-2x fa-twitter hover:scale-110 duration-200 hover:text-[#00acee]"></i></div></a>
+            </div>
+        </div>
         
         <script src="/src/js/navbar.js" async defer></script>
         <script src="/src/js/stats.js" ></script>
+
         <script src="/src/js/popUp.js" ></script>
     </body>
 </html>

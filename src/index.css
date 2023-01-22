@@ -1,12 +1,31 @@
 :root{
     --tBg:rgba(23, 23, 23, 0.6);
-
+    --primaryYellow: #FFDF2B;
 }
 
 body{
     max-width: 100%;
     overflow-x: hidden;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--tBg);
+    border-radius: 25px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primaryYellow);
+    border-radius: 25px;
+  }
+  
+  
 
 #heroSection{
     z-index: -1;

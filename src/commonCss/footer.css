@@ -1,0 +1,12 @@
+#footerLogo{
+    background: url(/Assets/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#footerLinks a{
+    transition: width 250ms ease-in-out;
+}
+#footerLinks a:hover{
+    width: 50px;
+}
