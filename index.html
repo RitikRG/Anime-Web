@@ -8,7 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/dist/output.css" rel="stylesheet">
         <link href="/src/index.css" rel="stylesheet">
-        <link href="/src/commonFiles/navbar.css" rel="stylesheet">
+        <link href="/src/commonCss/navbar.css" rel="stylesheet">
+        <link href="/src/commonCss/footer.css" rel="stylesheet">
+        <link href="/src/animeListCss.css" rel="stylesheet">
+        <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     </head>
     <body class="bg-neutral-900" >
         <!-- mobilogo -->
@@ -18,7 +22,7 @@
         <div class="w-full h-[75px] bg-neutral-900 sticky top-0 text-white flex justify-between px-4 pt-6 md:text-xl -translate-x-[200%] md:translate-x-[0%] z-10" >
             <a href=""><div id="logo"></div></a>
             <ul class="md:w-[50%] lg:w-[35%] flex justify-around h-fit">
-                <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 hover:text-primaryColor hover:border-primaryColor/50"><a href="">Home</a></li>
+                <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 text-primaryColor hover:border-primaryColor/50"><a href="">Home</a></li>
                 <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 hover:text-primaryColor hover:border-primaryColor/50"><a href="">Anime</a></li>
                 <li class="hover:scale-110 duration-200 rounded-xl hover:border-b-4 px-2 hover:text-primaryColor hover:border-primaryColor/50"><a href="">Socials</a></li>
                 <li class=" rounded-xl hover:border-b-4  hover:border-primaryColor/50 button"><a href=""><button class="rounded-full px-2 bg-primaryColor hover:scale-110 duration-200 text-neutral-900 font-semibold py-1 -translate-y-1">Contact Us</button></a></li>
@@ -33,17 +37,17 @@
                     <div id="closeIc" class="bg-primaryColor"></div>
                     <div id="menuHeader"></div>
                     <div id="menuContent" class="text-center -translate-x-[10%]">
-                        <ul class="linksList">
-                            <li>
+                        <ul class="">
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor">
                                 <a href="#" class="text-primaryColor">Home</a>
                             </li>
-                            <li>
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor mt-4">
                                 <a href="#">Anime</a>
                             </li>
-                            <li>
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor mt-4">
                                 <a href="#">Socials</a>
                             </li>
-                            <li>
+                            <li class="font-semibold text-xl hover:scale-105 duration-200 hover:text-primaryColor mt-4">
                                 <a href="#"><button class="rounded-full px-2 py-1 bg-primaryColor text-neutral-900">Contact Us</button></a>
                             </li>
                             
@@ -69,7 +73,87 @@
             <div class="w-[30%] text-center"><p class="text-2xl font-bold" ><span id="episodes"></span>+</p><p class="font-semibold">Episodes</p></div>
             <div class="w-[30%] text-center"><p class="text-2xl font-bold" ><span id="anime"></span>+</p><p class="font-semibold">Anime</p></div>
         </div>
-        <script src="/src/navbar.js" async defer></script>
+
+        <!-- Anime listing section -->
+        <div id="animeDubContainer" class=" relative w-[95%] mb-4 mx-auto px-4 text-white rounded-xl shadow-lg shadow-neutral-800/50 bg-neutral-800 md:w-[80vw]">
+            <div id="animeDubContainerHeading">
+                <p class="text-2xl my-1">Anime <span class="text-primaryColor">Dub</span></p>
+                <hr class="h-[10px]">
+            </div>
+            <div id="animeDubListContainer" class="flex gap-x-4 py-4">
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoSeriesLogo"><div id="listHeadNaruto" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">Naruto</div></div>
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoShippudenLogo"><div id="listHeadNarutoShippuden" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">: Shippuden</div></div>
+            </div>
+        </div>
+        <div id="animeSubContainer" class=" relative w-[95%] mb-4 mx-auto px-4 text-white rounded-xl shadow-lg shadow-neutral-800/50 bg-neutral-800 md:w-[80vw]">
+            <div id="animeSubContainerHeading">
+                <p class="text-2xl my-1">Anime <span class="text-primaryColor">Sub</span></p>
+                <hr class="h-[10px]">
+            </div>
+            <div id="animeSubListContainer" class="flex gap-x-4 py-4">
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoSubSeriesLogo"><div id="listHeadNaruto" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">Naruto</div></div>
+                <div class="w-[100px] h-[150px] md:w-[150px] md:h-[225px] rounded-lg shadow-lg shadow-primaryColor/20 border-4 border-primaryColor hover:scale-105 duration-200" id="narutoSubShippudenLogo"><div id="listHeadNarutoShippuden" class="w-full h-[20px] bg-primaryColor mt-28 translate-y-3 md:mt-44 md:text-2xl md:h-[32px] text-center text-black font-semibold">: Shippuden</div></div>
+            </div>
+        </div>
+        <!-- anime pop up -->
+        <div id="narutoPopUp" class="border-4 border-primaryColor popUpInit  left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-x-hidden overflow-y-scroll top-[80vh]">
+            <div id="narutoPopUpCloseIc" class="bg-primaryColor"></div>
+            <div class="w-[40%] h-[100%]" id="narutoPopUpImage"></div>
+            <div class="w-[60%] h-[100%] md:px-14 flex flex-col p-4">
+                <p class="text-3xl text-bold text-primaryColor mb-5 md:text-4xl">Naruto</p>
+                <p class="text-white text-md text-justify md:text-lg md:mb-14">Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village's leader and strongest ninja.</p>
+                <p class="text-center mt-4 md:text-2xl"><a href=""><button class="text-neutral-900 bg-primaryColor rounded-lg px-4 py-1 font-bold hover:scale-105 duration-200">Download</button></a></p>
+            </div>
+        </div>
+        <div id="narutoShippudenPopUp" class="border-4 border-primaryColor popUpInit top-[80vh] left-1/2 -translate-x-[50%] z-30 bg-neutral-800 rounded-xl absolute shadow-lg shadow-primaryColor/20 flex justify-between overflow-x-hidden overflow-y-scroll">
+            <div id="narutoShippudenPopUpCloseIc" class="bg-primaryColor"></div>
+            <div class="w-[40%] h-[100%]" id="narutoShippudenPopUpImage"></div>
+            <div class="w-[60%] h-[100%] md:px-10 flex flex-col p-4">
+                <p class="text-3xl text-bold text-primaryColor mb-4 md:text-4xl md:mb-8">Naruto: Shippuden</p>
+                <p class="text-white text-md md:text-xl text-justify md:mb-10">Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village's leader and strongest ninja.</p>
+                <p class="text-center mt-4 md:text-2xl"><a href=""><button class="text-neutral-900 bg-primaryColor rounded-lg px-4 py-1 font-bold hover:scale-105 duration-200">Download</button></a></p>
+            </div>
+        </div>
+        <!-- Trending Section -->
+        <div id="trendingSection" class="w-[95%] md:w-[80vw] rounded-xl bg-neutral-800 h-[300px] mx-auto shadow-xl mb-4">
+            <div id="trendingSectionHeading" class="w-full bg-primaryColor rounded-t-xl"><p class="text-neutral-900 text-xl px-4 py-2 font-bold">Trending Anime</p></div>
+            <div id="trendingSectionContainer" class="grid grid-cols-1 p-2 overflow-y-scroll gap-y-2">
+                <div class="w-full grid grid-cols-6 bg-neutral-700 rounded-xl align-baseline text-primaryColor shadow-md shadow-primaryColor/20">
+                    <div class="col-span-1 border-2 border-neutral-900  rounded-l-xl  px-1 py-2"><p class="text-center">1.</p></div>
+                    <div class="col-span-3 border-2 border-neutral-900  px-1 py-2  font-bold"><p class="text-primaryColor px-3 text-xl">Naruto</p></div>
+                    <div class="col-span-2 border-2 border-neutral-900 rounded-r-xl  px-1 py-2 text-center"><a href=""><button class="bg-primaryColor px-2 rounded-xl font-semibold hover:scale-105 duration-200 text-neutral-900">Watch now</button></a></div>
+                </div>
+                <div class="w-full grid grid-cols-6 bg-neutral-700 rounded-xl align-baseline text-primaryColor shadow-md shadow-primaryColor/20">
+                    <div class="col-span-1 border-2 border-neutral-900  rounded-l-xl  px-1 py-2"><p class="text-center">2.</p></div>
+                    <div class="col-span-3 border-2 border-neutral-900  px-1 py-2  font-bold"><p class="text-primaryColor px-3 text-xl">Naruto: Shippuden</p></div>
+                    <div class="col-span-2 border-2 border-neutral-900 rounded-r-xl  px-1 py-2 text-center"><a href=""><button class="bg-primaryColor px-2 rounded-xl font-semibold hover:scale-105 duration-200 text-neutral-900">Watch now</button></a></div>
+                </div>
+                <div class="w-full grid grid-cols-6 bg-neutral-700 rounded-xl align-baseline text-primaryColor shadow-md shadow-primaryColor/20">
+                    <div class="col-span-1 border-2 border-neutral-900  rounded-l-xl  px-1 py-2"><p class="text-center">3.</p></div>
+                    <div class="col-span-3 border-2 border-neutral-900  px-1 py-2  font-bold"><p class="text-primaryColor px-3 text-xl">Coming soon</p></div>
+                    <div class="col-span-2 border-2 border-neutral-900 rounded-r-xl  px-1 py-2 text-center"><a href=""><button class="bg-primaryColor px-2 rounded-xl font-semibold hover:scale-105 duration-200 text-neutral-900">Coming soon</button></a></div>
+                </div>
+        </div>
+        <!-- footer section -->
+        <div id="footerSection" class="w-full mt-8 flex relative bg-neutral-900 py-10">
+            <div class="w-[20vw] grid grid-cols-1">
+                <div><a href=""><div id="footerLogo" class="h-[100px] w-full"></div></a></div>
+            </div>
+            <div id="footerLinks" class="w-[40vw] grid grid-cols-1  px-20 text-xl text-white ">
+                <a href="" class="bg-primaryColor overflow-visible w-[0px] h-[4px] hover:text-primaryColor duration-200 rounded-full mt-6"><p class="-translate-y-8 ">Home</p></a>
+                <a href="" class="bg-primaryColor overflow-visible w-[0px] h-[4px] hover:text-primaryColor duration-200 rounded-full mt-10"><p class="-translate-y-8">Anime</p></a>
+                <a href="" class="bg-primaryColor overflow-visible w-[0px] h-[4px] hover:text-primaryColor duration-200 rounded-full mt-10"><p class="-translate-y-8">Socials</p></a>
+            </div>
+            <div id="footerSocials" class="grid grid-cols-1 md:grid-cols-3 md:text-2xl w-[40vw] text-center text-white gap-y-4 ">
+                <a href=""><div><i class="fab fa-2x fa-linkedin-in hover:scale-110 duration-200 hover:text-[#0A66C2]"></i></div></a>
+                <a href=""><div><i class="fab fa-2x fa-github hover:scale-110 duration-200 hover:text-black hover:bg-white rounded-full"></i></div></a>
+                <a href=""><div><i class="fab fa-2x fa-twitter hover:scale-110 duration-200 hover:text-[#00acee]"></i></div></a>
+            </div>
+        </div>
+        
+        <script src="/src/js/navbar.js" async defer></script>
         <script src="/src/js/stats.js" ></script>
+
+        <script src="/src/js/popUp.js" ></script>
     </body>
 </html>

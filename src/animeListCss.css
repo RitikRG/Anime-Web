@@ -1,0 +1,93 @@
+#narutoSeriesLogo{
+    background:url(/Assets/narutoSeriesLogo.jpg) no-repeat center/cover;
+}
+#narutoShippudenLogo{
+    background:url(/Assets/narutoShippudenLogo.jpg) no-repeat center/cover;
+}
+#narutoSubSeriesLogo{
+    background:url(/Assets/narutoSeriesLogo.jpg) no-repeat center/cover;
+}
+#narutoSubShippudenLogo{
+    background:url(/Assets/narutoShippudenLogo.jpg) no-repeat center/cover;
+}
+#narutoPopUpImage{
+    background:url(/Assets/narutoSeriesLogo.jpg) no-repeat center/cover;
+}
+#narutoShippudenPopUpImage{
+    background:url(/Assets/narutoShippudenLogo.jpg) no-repeat center/cover;
+}
+#narutoPopUpCloseIc{
+    background: url(/Assets/closeIc.png);
+    background-color: var(--nRed);
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    position: fixed;
+    right: 2%;
+    top: 5%;
+    cursor: pointer;
+}
+#narutoShippudenPopUpCloseIc{
+    background: url(/Assets/closeIc.png);
+    background-color: var(--nRed);
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    position: fixed;
+    right: 2%;
+    top: 5%;
+    cursor: pointer;
+}
+.popUpInit{
+    display: none;
+}
+.popUpOpen{
+    animation: openPop 1s;
+    width: 90vw;
+    height: 50vh;
+    transform: translateY(0px);
+    transform: translateX(-50%);
+}
+
+@keyframes openPop{
+    from{width: 0px; height: 0px; transform: translateY(50vh); transform: translateX(0%);}
+    to{width: 90vw; height: 50vh; transform: translateY(0px); transform: translateX(-50%);}
+}
+
+.popUpCLose{
+    animation: closePop 1s;
+    width: 0px;
+    height: 0px;
+    z-index: -1;
+}
+@keyframes closePop{
+    from{width: 90vw; height: 50vh;z-index: 1;}
+    to{width: 0px; height: 0px;z-index: -1;}
+}
+
+
+@media screen and (min-width:768px){
+    .popUpOpen{
+        animation: openPop 1s;
+        width: 80vw;
+        height: 50vh;
+        transform: translateY(10%);
+        transform: translateX(-50%);
+    }
+    @keyframes openPop{
+        from{width: 0px; height: 0px; transform: translateY(50vh); transform: translateX(0%);}
+        to{width: 80vw; height: 50vh; transform: translateY(10%); transform: translateX(-50%);}
+    }
+    .popUpCLose{
+        animation: closePop 1s;
+        width: 0px;
+        height: 0px;
+        z-index: -1;
+    }
+    @keyframes closePop{
+        from{width: 80vw; height: 50vh;z-index: 1;}
+        to{width: 0px; height: 0px;z-index: -1;}
+    }
+}
